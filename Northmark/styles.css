@@ -1,0 +1,332 @@
+/* =========================================================
+   NORTHMARK - STYLES
+   Brand colors are defined once below. Change them here and
+   they update everywhere on the site.
+   ========================================================= */
+
+:root {
+  --ink: #121212;          /* Primary text */
+  --orange: #E85D24;       /* Main accent / burnt orange */
+  --rust: #9B3418;         /* Secondary accent / deep rust */
+  --bg: #F7F2EA;           /* Page background / warm white */
+  --card: #FFFDFC;         /* Card background */
+  --muted: #6B625B;        /* Muted text */
+  --border: #DED3C7;       /* Borders / dividers */
+}
+
+/* ---------- Base ---------- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* Makes nav links scroll smoothly */
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+/* Centered content wrapper used by every section */
+.container {
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Shared section spacing ---------- */
+section {
+  padding: 96px 0;
+}
+
+.section-title {
+  font-size: 32px;
+  margin: 0 0 12px;
+}
+
+.section-subtitle {
+  color: var(--muted);
+  margin: 0 0 40px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--orange);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--rust);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--border);
+}
+.btn-outline:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+/* ---------- Header ---------- */
+.header {
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.nav a {
+  margin-left: 28px;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 15px;
+}
+.nav a:hover {
+  color: var(--orange);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 120px 0;
+}
+
+.hero-title {
+  font-size: 52px;
+  line-height: 1.1;
+  margin: 0 0 20px;
+  max-width: 720px;
+}
+
+.hero-subtitle {
+  font-size: 19px;
+  color: var(--muted);
+  max-width: 560px;
+  margin: 0 0 32px;
+}
+
+.hero-buttons .btn {
+  margin-right: 12px;
+}
+
+/* ---------- What We Do ---------- */
+.what-we-do-copy {
+  max-width: 680px;
+  margin-bottom: 48px;
+}
+.what-we-do-copy p {
+  margin: 0 0 16px;
+}
+
+/* 3-card grid */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 28px;
+}
+.card-title {
+  font-size: 19px;
+  margin: 0 0 10px;
+}
+.card-text {
+  color: var(--muted);
+  margin: 0;
+  font-size: 15px;
+}
+
+/* ---------- Work / Portfolio ---------- */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.project-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Placeholder image box. Swap the div for an <img> to use a real photo. */
+.project-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 200px;
+  background: var(--border);
+  color: var(--muted);
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+/* Keeps real images the same size as the placeholder box */
+img.project-image {
+  object-fit: cover;
+}
+
+.project-body {
+  padding: 24px;
+}
+.project-category {
+  display: inline-block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--orange);
+  margin-bottom: 8px;
+}
+.project-name {
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+.project-text {
+  color: var(--muted);
+  font-size: 15px;
+  margin: 0 0 16px;
+}
+.project-link {
+  color: var(--orange);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 15px;
+}
+.project-link:hover {
+  color: var(--rust);
+}
+
+/* ---------- About ---------- */
+.about-text {
+  max-width: 680px;
+  font-size: 18px;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ---------- Contact ---------- */
+.contact-text {
+  margin: 0 0 32px;
+  color: var(--muted);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 520px;
+}
+.contact-form label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.contact-form input,
+.contact-form textarea {
+  font-family: inherit;
+  font-size: 15px;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--card);
+  color: var(--ink);
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--orange);
+}
+.contact-form .btn {
+  align-self: flex-start;
+}
+
+.contact-note {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 16px 0 0;
+}
+.contact-note a {
+  color: var(--orange);
+  text-decoration: none;
+}
+.contact-note a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 40px 0;
+}
+.footer-logo {
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0 0 6px;
+}
+.footer-copy {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 760px) {
+  section {
+    padding: 64px 0;
+  }
+  .hero {
+    padding: 80px 0;
+  }
+  .hero-title {
+    font-size: 38px;
+  }
+  .cards,
+  .project-grid {
+    grid-template-columns: 1fr; /* Stack cards on small screens */
+  }
+  .nav a {
+    margin-left: 16px;
+    font-size: 14px;
+  }
+  .header-inner {
+    height: 64px;
+  }
+}
